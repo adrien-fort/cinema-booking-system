@@ -42,5 +42,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
-          SONAR_PROJECT_KEY: adrien-fort_cinema-booking-system
-          SONAR_ORGANIZATION: adrien-fort
+        with:
+          args: >
+            -Dsonar.projectKey=adrien-fort_cinema-booking-system
+            -Dsonar.organization=adrien-fort
